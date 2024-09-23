@@ -1,13 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import lynessSnow from '../public/images/snow.webp';
+import NavButtons from '../components/NavButtons.svelte';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<div>
-			<Image src={lynessSnow} alt="Lyness in winter"></Image>
+  <main class="flex flex-row w-fit">
+    <div class="h-svh w-screen bg-cover bg-[url('../images/snow.webp')] scroll-section" data-title="Home">
+		<div class="p-32 h-full w-fit flex flex-col justify-end drop-shadow-lg">
+			<h1 class="text-white text-9xl font-black">LYNESS</h1>
+			<hr>
+			<p class="text-white text-xl"> join us in shaping the future of renewables in Scotland</p>
 		</div>
-	</main>
+	</div>
+    
+	<div class="h-svh w-screen scroll-section" data-title="History">
+		<div class="p-32 size-full grid grid-cols-3 grid-rows-2">
+			<div class="h-full w-auto bg-white"></div>
+			<div class="h-full w-auto bg-red-700 col-span-2"></div>
+			<div class="h-full w-auto bg-red-700 col-span-2"></div>
+			<div class="h-full w-auto bg-white"></div>
+			<!-- <div class="bg-white"></div> -->
+		</div>
+	</div>
+    
+	<div class="h-svh w-screen scroll-section" data-title="3"></div>
+  </main>
+  <NavButtons client:load/>
 </Layout>
