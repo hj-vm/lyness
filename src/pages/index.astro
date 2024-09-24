@@ -5,25 +5,56 @@ import NavButtons from '../components/NavButtons.svelte';
 
 <Layout title="Welcome to Astro.">
   <main class="flex flex-row w-fit">
-    <div class="h-svh w-screen bg-cover bg-[url('../images/snow.webp')] scroll-section" data-title="Home">
-		<div class="p-32 h-full w-fit flex flex-col justify-end drop-shadow-lg">
-			<h1 class="text-white text-9xl font-black">LYNESS</h1>
-			<hr>
-			<p class="text-white text-xl"> join us in shaping the future of renewables in Scotland</p>
+    <div class="h-svh w-screen bg-cover bg-center bg-[url('../images/snow.webp')] scroll-section" data-title="Home">
+		<div class="p-32 h-full w-full flex flex-row">
+			<div class="flex flex-col justify-end drop-shadow-lg">
+				<h1 class="text-white  text-9xl font-black drop-shadow-lg">LYNESS</h1>
+				<hr>
+				<p class="text-white  text-xl text-nowrap drop-shadow-md"> join us in shaping the future of renewables in Scotland</p>
+			</div>
+			<div class="bg-black bg-opacity-50 backdrop-blur-sm size-full ml-64 rounded-xl flex flex-col justify-evenly">
+				<div class="flex flex-row m-8 justify-between text-white items-center">
+					<h2 class="text-3xl font-medium" >seven hectares<br>available</h2>
+					<svg width="128" height="128" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+						<path d="m637.5 148.22h272.11c18.938 0 34.875 14.109 37.219 32.859l42.422 340.55h-172.26c-18.984 0-34.969 14.156-37.266 33l-25.594 212.11-110.3 49.969-142.55-116.2 131.48-237.79c3.0938-5.5312 4.6875-11.812 4.6875-18.141zm-290.72 346.03c8.5781-9.75 21.516-14.391 34.406-12.234 12.797 2.1562 23.578 10.734 28.5 22.734l48.656 118.55 104.16-188.34v-286.74h-272.11c-18.938 0-34.875 14.109-37.219 32.859l-60.938 489.28 154.6-176.16zm404.58 356.11-97.688 44.297c-12.984 5.8594-28.125 3.9375-39.188-5.1094l-184.82-150.66c-0.5625-0.46875-0.79688-1.125-1.3125-1.5938-2.625-2.3906-4.8281-5.1094-6.7031-8.1562-0.65625-1.0781-1.3125-2.0625-1.875-3.1406-0.32812-0.65625-0.84375-1.2188-1.125-1.875l-55.359-134.9-187.6 213.79-25.734 206.68c-1.3125 10.688 1.9688 21.422 9.0938 29.438 7.125 8.0625 17.344 12.656 28.125 12.656h564.19zm98.859-253.74-23.859 197.9v257.21h186.47c10.781 0 21-4.5938 28.125-12.656s10.406-18.797 9.0938-29.438l-51.422-412.97h-148.36z" fill="#fff"/>
+					</svg>
+				</div>
+				<hr class="mx-8">
+				<div class="flex flex-row m-8 justify-between text-white items-center">
+					<h2 class="text-3xl font-medium" >strategic<br>location</h2>
+					<svg width="128" height="128" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+						<path d="m380.5 473.25h119.5v119.5h-119.5z" fill="#fff"/>
+						<path d="m540.25 473.25h119.5v119.5h-119.5z" fill="#fff"/>
+						<path d="m699.75 473.25h119.5v119.5h-119.5z" fill="#fff"/>
+						<path d="m452.25 322h119.5v119.5h-119.5z" fill="#fff"/>
+						<path d="m628.25 322h119.5v119.5h-119.5z" fill="#fff"/>
+						<path d="m1187.8 855h-50c2.332-3.7773 3.7031-8.0703 4-12.5l25-300h-35.75v-96.5c0-12.5-15.5-20.75-31-20.75h-97.5c-15.75 0-25 8.25-25 20.75v97.25h-32.75l-7.25 81.75h-731l-46.75-81.75h-159.75l173.5 302c1.9727 3.4961 4.3203 6.7656 7 9.75h-78c-6.3516 0-11.5 5.1484-11.5 11.5s5.1484 11.5 11.5 11.5h1085.2c6.3516 0 11.5-5.1484 11.5-11.5s-5.1484-11.5-11.5-11.5zm-946.5-143.5c-5.2539 0-10.289-2.0938-13.992-5.8164-3.707-3.7227-5.7773-8.7656-5.7578-14.02 0.023438-5.25 2.1367-10.277 5.875-13.969 3.7383-3.6914 8.793-5.7383 14.043-5.6953 5.2539 0.046875 10.27 2.1797 13.945 5.9336s5.7031 8.8125 5.6367 14.066c0 5.2148-2.0898 10.215-5.8008 13.879-3.7109 3.6641-8.7344 5.6875-13.949 5.6211zm120.5 0c-5.2656 0.066406-10.34-1.9727-14.098-5.668-3.7539-3.6914-5.8789-8.7305-5.9023-13.996-0.019531-5.2695 2.0625-10.324 5.7852-14.051 3.7266-3.7227 8.7812-5.8047 14.051-5.7852 5.2656 0.023438 10.305 2.1484 13.996 5.9023 3.6953 3.7578 5.7344 8.832 5.668 14.098 0 5.1719-2.0547 10.133-5.7109 13.789s-8.6172 5.7109-13.789 5.7109zm120.5 0c-5.2656 0.066406-10.34-1.9727-14.098-5.668-3.7539-3.6914-5.8789-8.7305-5.9023-13.996-0.019531-5.2695 2.0625-10.324 5.7852-14.051 3.7266-3.7227 8.7812-5.8047 14.051-5.7852 5.2656 0.023438 10.305 2.1484 13.996 5.9023 3.6953 3.7578 5.7344 8.832 5.668 14.098 0 5.1719-2.0547 10.133-5.7109 13.789s-8.6172 5.7109-13.789 5.7109zm291.25-7.5h-32.75v-32.75h32.75zm46 0h-29.5v-32.75h29.5zm52.5 0h-32.75v-32.75h32.75zm45.75 0h-29.5v-32.75h29.5zm52.5 0h-32.75v-32.75h32.75zm50 0h-33.5v-32.75h32.75zm0-210h-33.5v-29.5h32.75zm50 0h-34.25v-29.5h32.75zm50 0h-35v-29.5h32.75z" fill="#fff"/>
+					</svg>
+				</div>
+				<hr class="mx-8">
+				<div class="flex flex-row m-8 justify-between text-white items-center">
+					<h2 class="text-3xl font-medium" >other<br>stat</h2>
+					<svg width="128" height="128" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+						<path d="m551.76 337.5h216.98l-120.52 210h120.52l-192.84 315h-96.422l96.422-210h-144.66zm348.24-113.62-32.062-75-0.1875-0.375-20.812-48.938-18.188 27.938c-101.48-49.172-216.14-64.359-326.9-43.219-110.77 21.094-211.78 77.344-288.1 160.4l56.25-0.9375-11.438 54.75 4.875 3c63.891-72.188 149.29-121.87 243.56-141.79 94.312-19.922 192.52-9 280.13 31.172l-22.312 34.125zm194.63 551.81c32.156-90.375 38.953-187.82 19.547-281.81-19.359-93.938-64.125-180.79-129.42-251.06l9 57.188-56.625 2.0625c72.797 82.172 112.92 188.16 112.88 297.94 0.09375 49.547-8.1562 98.719-24.375 145.5l-36.938-16.125 23.812 133.13 113.62-73.125zm-944.63-175.69c-0.046875-49.312 8.0625-98.297 24-144.94l34.688 15.938-21.188-133.5-115.12 71.062 33.188 15.188c-32.297 90.422-39.141 188.02-19.828 282.05 19.359 94.078 64.172 181.03 129.52 251.39l9.75-57.188 37.875-2.0625c-72.797-82.172-112.92-188.16-112.88-297.94zm787.5 356.26-0.9375-57.75c-63.516 71.719-148.31 121.26-241.97 141.42-93.656 20.156-191.29 9.8906-278.72-29.297l19.312-29.062-135.19-0.1875 51.938 124.87 21.75-32.625c104.72 50.109 223.13 64.078 336.61 39.656 113.48-24.375 215.72-85.734 290.58-174.47z" fill="#fff"/>
+					</svg>
+				</div>
+			</div>
 		</div>
 	</div>
     
-	<div class="h-svh w-screen scroll-section" data-title="History">
-		<div class="p-32 size-full grid grid-cols-3 grid-rows-2">
-			<div class="h-full w-auto bg-white"></div>
-			<div class="h-full w-auto bg-red-700 col-span-2"></div>
-			<div class="h-full w-auto bg-red-700 col-span-2"></div>
-			<div class="h-full w-auto bg-white"></div>
-			<!-- <div class="bg-white"></div> -->
+	<div class="h-svh w-screen scroll-section overflow-y-scroll scrollbar-none" data-title="About Lyness">
+		<div class="p-32 h-fit w-full flex flex-col">
+			<div class="h-72 bg-white"></div>
+			<div class="h-72 bg-red-200"></div>
+			<div class="h-72 bg-white"></div>
+			<div class="h-72 bg-red-200"></div>
+			<div class="h-72 bg-white"></div>
+			<div class="h-72 bg-red-200"></div>
 		</div>
 	</div>
     
-	<div class="h-svh w-screen scroll-section" data-title="3"></div>
+	<div class="h-svh w-screen scroll-section" data-title="The Future"></div>
+
   </main>
   <NavButtons client:load/>
 </Layout>
